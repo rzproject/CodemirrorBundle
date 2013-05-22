@@ -1,0 +1,74 @@
+{% block rz_codemirror_widget %}
+{% spaceless %}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+{% endspaceless %}
+<script>
+jQuery(document).ready(function() {
+  // Initialize CodeMirror editor with a nice html5 canvas demo.
+    var codemirror_editor_{{id}}_settings = {
+        tabMode: 'indent',
+        {% if mode != '' %}
+        mode: '{{mode}}',
+        {% else %}
+        mode: {
+            name: "htmlmixed",
+            scriptTypes: [{matches: /\/x-handlebars-template|\/x-mustache/i,
+                mode: null},
+                {matches: /(text|application)\/(x-)?vb(a|script)/i,
+                    mode: "vbscript"}]
+        },
+        {% endif %}
+        {% if indent_unit != '' %}
+        indentUnit: {{indent_unit}},
+        {% endif %}
+        {% if smart_indent != '' %}
+        smartIndent: {{smart_indent}},
+        {% endif %}
+        {% if tab_size != '' %}
+        tabSize: {{tab_size}},
+        {% endif %}
+        {% if indent_with_tabs != '' %}
+        indentWithTabs: {{indent_with_tabs}},
+        {% endif %}
+        {% if auto_clear_empty_lines != '' %}
+        autoClearEmptyLines: {{auto_clear_empty_lines}},
+        {% endif %}
+        {% if line_wrapping != '' %}
+        lineWrapping: {{line_wrapping}},
+        {% endif %}
+        {% if line_numbers != '' %}
+        lineNumbers: {{line_numbers}},
+        {% endif %}
+        {% if first_line_number != '' %}
+        firstLineNumber: {{first_line_number}},
+        {% endif %}
+        {% if line_number_formatter != '' %}
+        lineNumberFormatter: {{line_number_formatter}},
+        {% endif %}
+        {% if gutter != '' %}
+        gutter: {{gutter}},
+        {% endif %}
+        {% if fixed_gutter != '' %}
+        fixedGutter: {{fixed_gutter}},
+        {% endif %}
+        {% if read_only != '' %}
+        readOnly: {{read_only}},
+        {% endif %}
+        {% if match_brackets != '' %}
+        matchBrackets: {{match_brackets}},
+        {% endif %}
+        {% if autofocus != '' %}
+        autofocus: {{autofocus}},
+        {% endif %}
+        {% if theme != '' %}
+        theme: '{{theme}}',
+        {% endif %}
+        {% if show_cursor_when_selecting != '' %}
+        showCursorWhenSelecting: '{{show_cursor_when_selecting}}',
+        {% endif %}
+    };
+
+    rz_codemirror_obj.register('codemirror_editor_{{id}}', document.getElementById('{{id}}'),  codemirror_editor_{{id}}_settings);
+});
+</script>
+{% endblock rz_codemirror_widget %}
