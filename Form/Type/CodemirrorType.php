@@ -1,8 +1,9 @@
 <?php
+
 /*
- * This file is part of the RzProject Bundle.
+ * This file is part of the RzCodemirrorBundle package.
  *
- * (c) mell m. zamora <me@mellzamora.com>
+ * (c) mell m. zamora <mell@rzproject.org>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
