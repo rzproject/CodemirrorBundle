@@ -17,7 +17,7 @@
         "rmzamora/jquery-bundle": "1.9.*@dev"
     },
     "autoload": {
-        "psr-0": { "Rz\\CodemirrorBundle": "" }
+        "psr-4": { "Rz\\CodemirrorBundle\\": "" }
     },
     "target-dir": "Rz/CodemirrorBundle",
     "extra": {
