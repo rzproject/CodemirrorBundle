@@ -19,7 +19,6 @@
     "autoload": {
         "psr-4": { "Rz\\CodemirrorBundle\\": "" }
     },
-    "target-dir": "Rz/CodemirrorBundle",
     "extra": {
         "branch-alias": {
             "dev-2.2": "2.2.x-dev",
