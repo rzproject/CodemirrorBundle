@@ -14,7 +14,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "rmzamora/jquery-bundle": "1.9.*@dev"
+        "rmzamora/jquery-bundle": ">=1.11.0,<2.0"
     },
     "autoload": {
         "psr-4": { "Rz\\CodemirrorBundle\\": "" }
